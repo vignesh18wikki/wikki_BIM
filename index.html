@@ -1361,101 +1361,6 @@ section,
   .bim-clash-callout{right:4vw!important;left:4vw!important;bottom:4.5svh!important;width:auto!important;text-align:center!important;font-size:9px!important;letter-spacing:.08em!important;z-index:30!important;}
 }
 </style>
-<style id="wikki-mobile-final-bim-layout">
-@media (max-width:760px){
-  /* Keep the BIM viewport visible above the information card on phones. */
-  #wikki-webgl-canvas{position:fixed!important;top:72px!important;left:0!important;width:100vw!important;height:calc(100svh - 72px)!important;z-index:2!important;}
-  #wikki-webgl-canvas canvas{width:100%!important;height:100%!important;display:block!important;}
-  #hero,#architecture,#structural,#mep,#clash{min-height:100svh!important;height:100svh!important;padding:86px 5vw 24px!important;display:flex!important;align-items:flex-end!important;justify-content:center!important;overflow:hidden!important;}
-  #architecture .systemCopy,#structural .systemCopy,#mep .systemCopy,#clash .systemCopy{width:100%!important;max-width:100%!important;margin:0!important;padding:24px 20px!important;z-index:10!important;background:rgba(4,10,16,.90)!important;backdrop-filter:blur(10px)!important;}
-  #architecture .sectionTitle,#structural .sectionTitle,#mep .sectionTitle,#clash .sectionTitle{font-size:clamp(30px,8.2vw,38px)!important;line-height:1.04!important;}
-  #architecture .copy,#structural .copy,#mep .copy,#clash .copy{font-size:13px!important;line-height:1.58!important;}
-  #about{padding:90px 5vw 70px!important;}
-  #about .about-dual-layout{grid-template-columns:1fr!important;gap:24px!important;}
-  #about .aboutWrap{order:1!important;}
-  #about .engineer-avatar-card{order:2!important;display:block!important;visibility:visible!important;}
-}
-</style>
-
-<style id="wikki-mobile-definitive-fix">
-@media (max-width:760px){
-  html,body{width:100%;max-width:100%;overflow-x:hidden!important;}
-
-  /* Give the BIM animation a dedicated, visible upper area on phones. */
-  #wikki-webgl-canvas{
-    position:fixed!important;
-    top:72px!important;
-    left:0!important;
-    width:100vw!important;
-    height:52svh!important;
-    z-index:2!important;
-    display:block!important;
-    visibility:visible!important;
-    opacity:1!important;
-    pointer-events:none!important;
-  }
-  #wikki-webgl-canvas.bim-hidden{opacity:1!important;visibility:visible!important;}
-  #wikki-webgl-canvas canvas{display:block!important;width:100%!important;height:100%!important;}
-
-  #hero,#architecture,#structural,#mep,#clash{
-    min-height:100svh!important;
-    height:100svh!important;
-    padding:86px 5vw 22px!important;
-    display:flex!important;
-    align-items:flex-end!important;
-    justify-content:center!important;
-    overflow:visible!important;
-  }
-  #architecture .systemCopy,#structural .systemCopy,#mep .systemCopy,#clash .systemCopy{
-    width:100%!important;max-width:100%!important;min-width:0!important;
-    margin:0!important;padding:22px 19px!important;position:relative!important;
-    z-index:10!important;background:rgba(4,10,16,.92)!important;
-    backdrop-filter:blur(12px);
-  }
-  #architecture .sectionTitle,#structural .sectionTitle,#mep .sectionTitle,#clash .sectionTitle{
-    font-size:clamp(29px,8vw,37px)!important;line-height:1.04!important;
-    overflow-wrap:anywhere!important;
-  }
-  #architecture .copy,#structural .copy,#mep .copy,#clash .copy{
-    font-size:13px!important;line-height:1.55!important;
-  }
-
-  /* Portfolio: show the complete presentation board; never crop it on mobile. */
-  #projects{width:100%!important;padding:80px 5vw 70px!important;overflow:visible!important;}
-  #projects > div{width:100%!important;max-width:100%!important;}
-  .portfolio-grid-3d{display:flex!important;flex-direction:column!important;width:100%!important;gap:26px!important;}
-  .project-3d-card{width:100%!important;max-width:100%!important;min-width:0!important;overflow:hidden!important;}
-  .card-inner{display:flex!important;flex-direction:column!important;width:100%!important;min-height:0!important;}
-  .card-image-box{
-    width:100%!important;height:auto!important;min-height:0!important;
-    aspect-ratio:3 / 2!important;border-right:0!important;
-    border-bottom:1px solid rgba(141,200,255,.12)!important;overflow:hidden!important;
-    background:#020406!important;
-  }
-  .card-image-box img{
-    display:block!important;width:100%!important;height:100%!important;
-    min-height:0!important;max-width:100%!important;
-    object-fit:contain!important;object-position:center!important;background:#020406!important;
-  }
-  .card-info-box{
-    display:flex!important;width:100%!important;min-width:0!important;max-width:100%!important;
-    padding:26px 20px!important;box-sizing:border-box!important;overflow:visible!important;
-  }
-  .card-info-box h3,.project-detail,.project-specs{max-width:100%!important;overflow-wrap:anywhere!important;}
-  .project-specs{grid-template-columns:repeat(3,minmax(0,1fr))!important;}
-
-  #about{padding:80px 5vw 60px!important;}
-  #about .about-dual-layout{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:24px!important;}
-  #about .aboutWrap,#about .engineer-avatar-card{width:100%!important;max-width:100%!important;min-width:0!important;}
-  #about .engineer-img-wrapper{width:100%!important;aspect-ratio:4/5!important;min-height:360px!important;}
-}
-</style>
-
-<style id="wikki-final-engineer-card-lock">
-#engineer-card,#engineer-card:hover,#engineer-card.is-hovered{transform:none!important;}
-</style>
-<style id="wikki-clash-resolution-safety"></style>
-
 </head>
 <body>
 
@@ -1854,23 +1759,19 @@ document.addEventListener('keydown', (e) => {
   camera.position.set(25, 18, 30);
 
   const renderer = new THREE.WebGLRenderer({ antialias:true, alpha:true });
+  renderer.setSize(window.innerWidth, window.innerHeight);
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-
-  const updateBimViewport = () => {
-    const w = canvasContainer.clientWidth || window.innerWidth;
-    const h = canvasContainer.clientHeight || window.innerHeight;
+  const updateMobileCamera = () => {
     const mobile = window.innerWidth <= 760;
-    camera.aspect = w / Math.max(1, h);
-    camera.fov = mobile ? 58 : 34;
+    camera.fov = mobile ? 60 : 34;
     camera.updateProjectionMatrix();
-    renderer.setSize(w, h, false);
   };
+  updateMobileCamera();
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
   renderer.toneMappingExposure = 1.15;
   renderer.shadowMap.enabled = true;
   renderer.shadowMap.type = THREE.PCFSoftShadowMap;
   canvasContainer.appendChild(renderer.domElement);
-  updateBimViewport();
 
   const ambient = new THREE.HemisphereLight(0xdcecff, 0x17212a, 1.8);
   scene.add(ambient);
@@ -2181,7 +2082,6 @@ document.addEventListener('keydown', (e) => {
 
   // Straight, disciplined BIM explosion: layers separate vertically by discipline.
   // There is intentionally NO random/continuous rotation while scrolling.
-  let jumpedToServices = false;
   const tl=gsap.timeline({
     scrollTrigger:{
       trigger:'#hero', endTrigger:'#clash', start:'top top', end:'bottom bottom', scrub:0.8,
@@ -2205,16 +2105,8 @@ document.addEventListener('keydown', (e) => {
         approvalMarker.visible = resolvedStage;
         approvalGlow.visible = resolvedStage;
         approvalLight.intensity = resolvedStage ? 1.8 : 0;
-        if (self.progress < 0.90) jumpedToServices=false;
-        if(self.progress > 0.995 && self.direction > 0 && !jumpedToServices){
-          jumpedToServices=true;
-          setTimeout(()=>{
-            const services=document.getElementById('services');
-            if (bimCanvas) bimCanvas.classList.add('bim-hidden');
-            if (bimCallout) bimCallout.classList.add('bim-hidden');
-            if(services) services.scrollIntoView({behavior:'smooth',block:'start'});
-          },180);
-        }
+        // Do not force-scroll to Our Services here.
+        // Let the browser/user continue scrolling naturally after Clash Detection.
       }
     }
   });
@@ -2317,30 +2209,6 @@ document.addEventListener('keydown', (e) => {
     // Keep the BIM assembly straight and stable; mouse only adds a very subtle camera feel.
     // Subtle pulse only; the clash highlight stays fixed to the actual intersection.
     const timelineProgress = tl && typeof tl.progress === 'function' ? tl.progress() : 0;
-
-    // FINAL MOBILE BIM FRAMING: use a phone-friendly camera while preserving
-    // the exact same GSAP scroll/clash timeline. Desktop camera coordinates
-    // are too wide for a narrow portrait viewport and can push the model out
-    // of frame.
-    if (window.innerWidth <= 760) {
-      const t = timelineProgress * 5.75;
-      const keys = [
-        [0.00,17.0,12.0,30.0],[0.75,17.0,11.5,29.0],
-        [1.55,17.0,11.0,28.0],[2.45,16.5,10.5,27.0],
-        [3.35,16.0,9.5,24.0],[4.05,15.5,9.0,22.0],
-        [4.95,16.0,10.5,25.0],[5.75,17.0,12.0,28.0]
-      ];
-      let a=keys[0], b=keys[keys.length-1];
-      for(let i=0;i<keys.length-1;i++){
-        if(t>=keys[i][0] && t<=keys[i+1][0]){ a=keys[i]; b=keys[i+1]; break; }
-      }
-      const u=Math.max(0,Math.min(1,(t-a[0])/Math.max(0.001,b[0]-a[0])));
-      const e=u*u*(3-2*u);
-      camera.position.x=a[1]+(b[1]-a[1])*e;
-      camera.position.y=a[2]+(b[2]-a[2])*e;
-      camera.position.z=a[3]+(b[3]-a[3])*e;
-    }
-
     // Clash visibility is controlled only by ScrollTrigger.onUpdate.
     // Stable clash/resolution highlights — no blinking or breathing.
     if (clashMarker.visible) {
@@ -2359,7 +2227,9 @@ document.addEventListener('keydown', (e) => {
   animate();
 
   window.addEventListener('resize',()=>{
-    updateBimViewport();
+    camera.aspect=window.innerWidth/window.innerHeight;
+    updateMobileCamera();
+    renderer.setSize(window.innerWidth,window.innerHeight);
   });
 })();
 </script>
